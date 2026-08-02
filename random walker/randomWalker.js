@@ -5,20 +5,22 @@ class Walker {
     }
 
     show(){
-        stroke(0);
-        point(this.x, this.y);
+        fill(0, 25);
+        stroke(0, 50);
+        //{!1} Draw a random circle each time through draw().
+        circle(this.x,this.y, 16);
     }
 
     step(){
         let choice = floor(random(4));
         if(choice === 0){
-            this.x++;
+            this.x += 16;
         } else if(choice === 1){
-            this.x--;
+            this.x -= 16;
         } else if(choice === 2){
-            this.y++;
+            this.y += 16;
         } else {
-            this.y--;
+            this.y -= 16;
         }
     }
 
@@ -28,7 +30,7 @@ let walker;
 
  function setup(){
     
-    createCanvas(230, 230);
+    createCanvas(1080, 1080);
 
     walker = new Walker();
     background(255);
