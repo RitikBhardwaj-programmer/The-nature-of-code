@@ -8,5 +8,5 @@ function draw() {
   fill(0, 25);
   stroke(0, 50);
   //{!1} Draw a random circle each time through draw().
-  circle(random(width), random(height), 106);
+  circle(random(width), random(height), random(10,100));
 }
